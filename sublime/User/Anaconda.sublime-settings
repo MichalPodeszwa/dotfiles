@@ -1,0 +1,16 @@
+{
+    "settings": {
+        "python_interpreter": "$VIRTUAL_ENV/bin/python"
+    },
+    "display_signatures": true,
+    "autoformat_ignore":
+    [
+        "E501"
+    ],
+    "pep8_ignore":
+    [
+        "E501"
+    ],
+    "anaconda_linting_behaviour": "save-only",
+
+}

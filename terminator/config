@@ -1,0 +1,30 @@
+[global_config]
+[keybindings]
+  switch_to_tab_10 = <Primary>0
+  new_tab = <Primary>t
+  next_tab = <Primary>Tab
+  switch_to_tab_5 = <Primary>5
+  new_window = <Primary>n
+  prev_tab = <Primary><Shift>Tab
+  switch_to_tab_6 = <Primary>6
+  switch_to_tab_7 = <Primary>7
+  switch_to_tab_4 = <Primary>4
+  close_term = <Primary>w
+  switch_to_tab_2 = <Primary>2
+  switch_to_tab_3 = <Primary>3
+  switch_to_tab_1 = <Primary>1
+  reset_clear = <Primary>g
+  switch_to_tab_8 = <Primary>8
+  switch_to_tab_9 = <Primary>9
+[profiles]
+  [[default]]
+    show_titlebar = False
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
