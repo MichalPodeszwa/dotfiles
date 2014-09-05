@@ -18,6 +18,7 @@
   switch_to_tab_9 = <Primary>9
 [profiles]
   [[default]]
+    background_image = None
     show_titlebar = False
 [layouts]
   [[default]]

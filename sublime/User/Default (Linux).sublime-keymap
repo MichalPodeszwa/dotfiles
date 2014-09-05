@@ -1,8 +1,10 @@
 [
-    {"command": "anaconda_goto", "keys": ["ctrl+shift+g"]},
+    {"command": "anaconda_goto",        "keys": ["ctrl+shift+g"]},
     {"command": "anaconda_find_usages", "keys": ["ctrl+shift+f"]},
-    {"command": "anaconda_doc", "keys": ["ctrl+shift+d"]},
+    {"command": "anaconda_doc",         "keys": ["ctrl+shift+d"]},
     {"command": "anaconda_auto_format", "keys": ["ctrl+shift+r"]},
-    {"command": "toggle_menu", "keys": ["f10"] },
+    {"command": "toggle_menu",          "keys": ["f10"]},
+    {"command": "next_view",            "keys": ["ctrl+tab"]},
+    {"command": "prev_view",            "keys": ["ctrl+shift+tab"]},
 
 ]
