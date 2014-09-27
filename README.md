@@ -28,3 +28,8 @@ inputrc
     rm .inputrc
     ln -s ~/<path_to_this_directory>/.inputrc
 
+pip
+
+    cd ~/
+    rm -rf .pip
+    ln -s ~/<path_to_this_directory>/.pip
