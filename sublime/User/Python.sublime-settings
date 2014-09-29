@@ -1,4 +1,4 @@
 {
-    "auto_formatting": true,
+    "auto_formatting": false,
     "auto_complete_triggers": [{"selector": "source.python - string - comment - constant.numeric", "characters": "."}]
 }
