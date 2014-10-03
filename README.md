@@ -12,9 +12,9 @@ Installation
 Sublime:
 
     cd ~/.config/sublime-text-3/Packages/
-    rm -rf User
+    rm -rf User Installed\ Packages
     ln -s ~/<path_to_this_directory>/sublime/User
-
+    ln -s ~/<path_to_this_directory>/sublime/Installed\ Packages
 
 Terminator
 
@@ -33,3 +33,9 @@ pip
     cd ~/
     rm -rf .pip
     ln -s ~/<path_to_this_directory>/.pip
+
+zsh
+
+    cd ~/
+    rm -rf .zshrc
+    ln -s ~/<path_to_this_directory>/.zshrc
