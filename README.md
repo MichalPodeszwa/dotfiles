@@ -1,13 +1,20 @@
-Dotfiles
-=====
+# Dotfiles
+
 
 My config files. Basically for personal use
 
-Installation
-----
+## Installation
+
 
 *NOTE: These instructions delete current settings*
 
+### Automatic
+
+You just have to use `sh bootstrap.sh`. This is important that you are in the repo main directory, or the script will fail.
+
+BOOM! You've done it.
+
+### Manual
 
 Sublime:
 
@@ -39,3 +46,5 @@ zsh
     cd ~/
     rm -rf .zshrc
     ln -s ~/<path_to_this_directory>/.zshrc
+
+BOOMish! You've done it.
