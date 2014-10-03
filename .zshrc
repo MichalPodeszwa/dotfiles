@@ -41,7 +41,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # git prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git*' formats "[%b]"
+zstyle ':vcs_info:git*' formats "[%b (%u%c)]"
+zstyle ':vcs_info:git:*' check-for-changes 'true'
 precmd() {vcs_info}
 
 # better path
@@ -105,3 +106,6 @@ subldiff() {
 #vars
 export BROWSER="firefox"
 export EDITOR="nano"
+
+#zsh plugins
+fpath=(/home/vessel/.zsh_plugins/zsh-completions/src $fpath)
