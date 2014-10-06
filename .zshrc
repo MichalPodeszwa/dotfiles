@@ -56,21 +56,12 @@ setopt prompt_subst
 PROMPT='%{$fg[blue]%}%n@%m:%{$fg[green]%}${PWD/#$HOME/~}
 %{$fg[blue]%}╰─${vcs_info_msg_0_}%{$reset_color%} %#> '
 
+# gitignore
+function gi() {
+    curl -L -s https://www.gitignore.io/api/$*
+}
 
-# autoload -U promptinit
-# promptinit
-# prompt adam2 green
-# autoload -Uz vcs_info
-# zstyle ':vcs_info:*' enable git
-# precmd () {vcs_info}
-# setopt prompt_subst
-# PS1="\$vcs_info_msg_0_$PS1"
-# chpwd() {
-#   [[ -o interactive ]] || return
-#   print -Pn "\e]2;%~\a"
-# }
-
-#extract
+# extract
 ext () {
     if [ -f $1 ]; then
         case $1 in

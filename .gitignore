@@ -5,3 +5,5 @@
 *.system-ca-bundle
 *.cache/
 *.ca-certs/
+
+download_cache
