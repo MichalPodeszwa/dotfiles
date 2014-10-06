@@ -2,7 +2,7 @@
 
 rm -rf ~/.inputrc ~/.pip ~/.zshrc ~/.config/sublime-text-3 ~/.config/terminator
 
-mkdir -p ~/.config/terminator ~/.config/sublime-text-3/Packages
+mkdir -p ~/.config/ ~/.config/sublime-text-3/Packages
 
 ln -s $PWD/.inputrc ~/.inputrc
 ln -s $PWD/.pip ~/.pip
