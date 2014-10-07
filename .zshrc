@@ -6,6 +6,9 @@ setopt hist_expire_dups_first
 setopt inc_append_history
 setopt share_history
 
+#load plugins
+source ~/.zsh/plugins.zsh
+
 # https://github.com/robbyrussell/oh-my-zsh/issues/1433
 # works on ubuntu:
 bindkey "$terminfo[kcuu1]" history-search-backward
@@ -15,11 +18,9 @@ bindkey "$terminfo[kcud1]" history-search-forward
 # bindkey "^[[B" history-search-forward
 
 #misc
-# setopt autocd
 unsetopt beep
 setopt print_exit_value
 setopt no_hup
-# setopt auto_cd
 
 #keybindings
 bindkey -e
@@ -41,8 +42,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # git prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git*' formats "[%b (%u%c)]"
-zstyle ':vcs_info:git:*' check-for-changes 'true'
+zstyle ':vcs_info:git*' formats "[%b]"
 precmd() {vcs_info}
 
 # better path
@@ -97,6 +97,3 @@ subldiff() {
 #vars
 export BROWSER="firefox"
 export EDITOR="nano"
-
-#zsh plugins
-fpath=(/home/vessel/.zsh_plugins/zsh-completions/src $fpath)
