@@ -1,11 +1,12 @@
 
 
-rm -rf ~/.inputrc ~/.pip ~/.zshrc ~/.config/sublime-text-3 ~/.config/terminator
+rm -rf ~/.inputrc ~/.pip ~/.zshrc ~/.config/sublime-text-3 ~/.config/terminator ~/.zsh
 
 mkdir -p ~/.config/ ~/.config/sublime-text-3/Packages
 
 ln -s $PWD/.inputrc ~/.inputrc
 ln -s $PWD/.pip ~/.pip
+ln -s $PWD/.zsh ~/.zsh
 ln -s $PWD/.zshrc ~/.zshrc
 ln -s $PWD/terminator ~/.config/
 ln -s $PWD/sublime/User ~/.config/sublime-text-3/Packages/User
