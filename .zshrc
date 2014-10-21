@@ -93,6 +93,10 @@ subldiff() {
     git diff $* > /tmp/vardiff.diff && subl /tmp/vardiff.diff
 }
 
+#Vagrant aliases
+alias vu="vagrant up"
+alias vs="vagrant ssh"
+alias vus="vagrant up && vagrant ssh"
 
 #vars
 export BROWSER="firefox"
