@@ -97,6 +97,10 @@ subldiff() {
 alias vu="vagrant up"
 alias vs="vagrant ssh"
 alias vus="vagrant up && vagrant ssh"
+vh() {
+   vagrant halt $*
+}
+alias vst="vagrant global-status"
 
 #vars
 export BROWSER="firefox"
