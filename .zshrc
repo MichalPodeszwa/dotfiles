@@ -101,6 +101,9 @@ vh() {
    vagrant halt $*
 }
 alias vst="vagrant global-status"
+vr() {
+   vagrant reload $*
+}
 
 #vars
 export BROWSER="firefox"
