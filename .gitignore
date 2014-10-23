@@ -1,3 +1,5 @@
+pip.log
+
 *.sublime-package
 *.last-run
 *.ca-list
