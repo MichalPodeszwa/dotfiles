@@ -100,13 +100,10 @@ vsubl() {
 alias vu="vagrant up"
 alias vs="vagrant ssh"
 alias vus="vagrant up && vagrant ssh"
-vh() {
-   vagrant halt $*
-}
+alias vh="vagrant halt"
 alias vst="vagrant global-status"
-vr() {
-   vagrant reload $*
-}
+alias vr="vagrant reload"
+
 
 #vars
 export BROWSER="firefox"
