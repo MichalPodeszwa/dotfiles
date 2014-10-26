@@ -103,6 +103,7 @@ alias vus="vagrant up && vagrant ssh"
 alias vh="vagrant halt"
 alias vst="vagrant global-status"
 alias vr="vagrant reload"
+alias vp="vagrant provision"
 
 
 #vars
