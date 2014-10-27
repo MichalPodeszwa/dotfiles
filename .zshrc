@@ -92,21 +92,18 @@ alias ll='ls -lah --color=auto'
 subldiff() {
     git diff $* > /tmp/vardiff.diff && subl /tmp/vardiff.diff
 }
-vsubl() {
-    VIRTUAL_ENV=$PWD/venv subl $*
-}
+alias vsubl="VIRTUAL_ENV=$PWD/venv subl $*"
+
 
 #Vagrant aliases
 alias vu="vagrant up"
 alias vs="vagrant ssh"
 alias vus="vagrant up && vagrant ssh"
-vh() {
-   vagrant halt $*
-}
+alias vh="vagrant halt"
 alias vst="vagrant global-status"
-vr() {
-   vagrant reload $*
-}
+alias vr="vagrant reload"
+alias vp="vagrant provision"
+
 
 #vars
 export BROWSER="firefox"
