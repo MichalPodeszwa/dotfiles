@@ -11,6 +11,6 @@
     [
         "E501"
     ],
-    "anaconda_linting_behaviour": "save-only",
+    "anaconda_linting_behaviour": "always",
 
 }

@@ -19,6 +19,7 @@
 [profiles]
   [[default]]
     background_image = None
+    scroll_on_output = False
     show_titlebar = False
 [layouts]
   [[default]]
