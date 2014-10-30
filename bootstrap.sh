@@ -11,6 +11,9 @@ ln -s $PWD/.zshrc ~/.zshrc
 ln -s $PWD/terminator ~/.config/
 ln -s $PWD/sublime/User ~/.config/sublime-text-3/Packages/User
 ln -s $PWD/sublime/Installed\ Packages ~/.config/sublime-text-3/Installed\ Packages
+echo "I need root to link synaptics file"
+sudo rm -f /etc/X11/xorg.conf.d/50-synaptics.conf
+sudo ln -s $PWD/X11/xorg.conf.d/50-synaptics.conf /etc/X11/xorg.conf.d/50-synaptics.conf
 echo "DONE"
 
 read -p "Do you want to change your shell to zsh? (y/n)" choice
