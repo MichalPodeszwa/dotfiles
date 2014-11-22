@@ -1,6 +1,6 @@
 
 
-rm -rf ~/.inputrc ~/.pip ~/.zshrc ~/.config/sublime-text-3 ~/.config/terminator ~/.zsh
+rm -rf ~/.inputrc ~/.pip ~/.zshrc ~/.config/sublime-text-3 ~/.config/terminator ~/.zsh ~/.i3
 
 mkdir -p ~/.config/ ~/.config/sublime-text-3/Packages
 
@@ -11,6 +11,7 @@ ln -s $PWD/.zshrc ~/.zshrc
 ln -s $PWD/terminator ~/.config/
 ln -s $PWD/sublime/User ~/.config/sublime-text-3/Packages/User
 ln -s $PWD/sublime/Installed\ Packages ~/.config/sublime-text-3/Installed\ Packages
+ln -s $PWD/.i3 ~/.i3
 echo "I need root to link synaptics file"
 sudo rm -f /etc/X11/xorg.conf.d/50-synaptics.conf
 sudo ln -s $PWD/X11/xorg.conf.d/50-synaptics.conf /etc/X11/xorg.conf.d/50-synaptics.conf

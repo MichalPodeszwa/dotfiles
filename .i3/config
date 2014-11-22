@@ -1,0 +1,157 @@
+# Super key as modifier
+set $mod Mod4
+floating_modifier $mod
+
+font pango:DejaVu Sans Mono 8
+
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+q kill
+
+bindsym $mod+d exec dmenu_run
+
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+bindsym $mod+h split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen
+
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+
+# Named workspaces
+set $IMs 1
+set $IMs_name IMs
+bindsym $mod+$IMs workspace $IMs:$IMs_name
+bindsym $mod+Shift+$IMs move container to workspace $IMs:$IMs_name
+
+set $Web 2
+set $Web_name Web
+bindsym $mod+$Web workspace $Web:$Web_name
+bindsym $mod+Shift+$Web move container to workspace $Web:$Web_name
+
+set $Code 3
+set $Code_name Code
+bindsym $mod+$Code workspace $Code:$Code_name
+bindsym $mod+Shift+$Code move container to workspace $Code:$Code_name
+
+set $Terminals 4
+set $Terminals_name Terminals
+bindsym $mod+$Terminals workspace $Terminals:$Terminals_name
+bindsym $mod+Shift+$Terminals move container to workspace $Terminals:$Terminals_name
+
+set $Media 5
+set $Media_name Media
+bindsym $mod+$Media workspace $Media:$Media_name
+bindsym $mod+Shift+$Media move container to workspace $Media:$Media_name
+
+# Unnamed workspaces
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+#Move workspaces between outputs
+bindym $mod+Shift+Ctrl+left move workspace to output left
+bindym $mod+Shift+Ctrl+right move workspace to output right
+bindym $mod+Shift+Ctrl+up move workspace to output up
+bindym $mod+Shift+Ctrl+down move workspace to output down
+
+mode "resize" {
+
+        bindsym j resize shrink width 2 px or 2 ppt
+        bindsym k resize grow height 2 px or 2 ppt
+        bindsym l resize shrink height 2 px or 2 ppt
+        bindsym semicolon resize grow width 2 px or 2 ppt
+
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+bar {
+        status_command i3status
+}
+
+focus_follows_mouse off
+
+# Autostart
+exec --no-startup-id terminator -T handy_term
+exec --no-startup-id terminator -T handy_term2
+exec --no-startup-id thunderbird
+exec --no-startup-id dropboxd
+exec pidgin
+exec skype
+exec hipchat
+exec hexchat
+
+# Window specific configs
+for_window [class="^Pidgin$" window_role="^conversation$"] floating enable
+for_window [class="^Pidgin$" window_role="^conversation$"] move scratchpad
+for_window [class="^Pidgin$" window_role="^conversation$"] scratchpad show
+bindsym $mod+q [class="^Pidgin$" window_role="^conversation$"] scratchpad show
+
+for_window [class="^Terminator$" title="^handy_term$"] floating enable
+for_window [class="^Terminator$" title="^handy_term$"] move scratchpad
+bindsym $mod+F1 [class="^Terminator$" title="^handy_term$"] scratchpad show
+bindym $mod+Shift+F1 exec --no-startup-is terminator -T handy_term
+
+for_window [class="^Terminator$" title="^handy_term2$"] floating enable
+for_window [class="^Terminator$" title="^handy_term2$"] move scratchpad
+bindsym $mod+F2 [class="^Terminator$" title="^handy_term2$"] scratchpad show
+bindsym $mod+Shift+F2 exec --no-startup-id terminator -T handy_term2
+
+for_window [class="^Thunderbird$"] floating enable
+for_window [class="^Thunderbird$"] move scratchpad
+bindsym $mod+m [class="^Thunderbird$"] scratchpad show
+bindsym $mod+Shift+m exec --no-startup-id thunderbird
+
+for_window [class="^Skype$" window_role="^ConversationsWindow$"] floating enable
+for_window [class="^Skype$" window_role="^ConversationsWindow$"] move scratchpad
+for_window [class="^Skype$" window_role="^ConversationsWindow$"] scratchpad show
+bindsym $mod+a [class="^Skype$" window_role="^ConversationsWindow$"] scratchpad show
+
+for_window [class="^HipChat$"] floating enable
+for_window [class="^HipChat$"] move scratchpad
+for_window [class="^HipChat$"] scratchpad show
+bindsym $mod+z [class="^HipChat$"] scratchpad show
+
