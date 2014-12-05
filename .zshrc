@@ -11,11 +11,15 @@ source ~/.zsh/plugins.zsh
 
 # https://github.com/robbyrussell/oh-my-zsh/issues/1433
 # works on ubuntu:
-bindkey "$terminfo[kcuu1]" history-search-backward
-bindkey "$terminfo[kcud1]" history-search-forward
-# works on arch:
-# bindkey "^[[A" history-search-backward
-# bindkey "^[[B" history-search-forward
+
+if grep -q "Arch Linux" /etc/issue
+then
+    bindkey "^[[A" history-search-backward
+    bindkey "^[[B" history-search-forward
+else
+    bindkey "$terminfo[kcuu1]" history-search-backward
+    bindkey "$terminfo[kcud1]" history-search-forward
+fi
 
 #misc
 unsetopt beep
@@ -87,8 +91,8 @@ compdef '_files -g "*.{tar.bz2,tar.gz,bz2,gz,tar,tgz,tbz2,zip,Z,7z,rar,xz}"' ext
 
 
 #aliases
-alias ls='ls -lh --color=auto'
-alias ll='ls -lah --color=auto'
+alias ls='ls -Flh --color=auto'
+alias ll='ls -Flah --color=auto'
 subldiff() {
     git diff $* > /tmp/vardiff.diff && subl /tmp/vardiff.diff
 }
@@ -108,3 +112,9 @@ alias vp="vagrant provision"
 #vars
 export BROWSER="firefox"
 export EDITOR="nano"
+
+# enable keychain
+eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
+
+export LANG="pl_PL.UTF-8"
+export LC_all="pl_PL.UTF-8"

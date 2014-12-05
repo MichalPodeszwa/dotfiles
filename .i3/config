@@ -6,13 +6,9 @@ font pango:DejaVu Sans Mono 8
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
+bindsym $mod+l exec slimlock
 
-bindsym $mod+d exec dmenu_run
-
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+d exec LANG=pl_PL.UTF-8 dmenu_run
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -29,6 +25,9 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+Shift+Tab workspace prev_on_output
 
 bindsym $mod+h split h
 bindsym $mod+v split v
@@ -68,13 +67,16 @@ set $Media_name Media
 bindsym $mod+$Media workspace $Media:$Media_name
 bindsym $mod+Shift+$Media move container to workspace $Media:$Media_name
 
+set $Firebug 6
+set $Firebug_name Firebug
+bindsym $mod+$Firebug workspace $Firebug:$Firebug_name
+bindsym $mod+Shift+$Firebug move container to workspace $Firebug:$Firebug_name
+
 # Unnamed workspaces
-bindsym $mod+6 workspace number 6
 bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
-bindsym $mod+Shift+6 move container to workspace number 6
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
@@ -86,10 +88,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 #Move workspaces between outputs
-bindym $mod+Shift+Ctrl+left move workspace to output left
-bindym $mod+Shift+Ctrl+right move workspace to output right
-bindym $mod+Shift+Ctrl+up move workspace to output up
-bindym $mod+Shift+Ctrl+down move workspace to output down
+bindsym $mod+Shift+Ctrl+Left move workspace to output left
+bindsym $mod+Shift+Ctrl+Right move workspace to output right
+bindsym $mod+Shift+Ctrl+Up move workspace to output up
+bindsym $mod+Shift+Ctrl+Down move workspace to output down
 
 mode "resize" {
 
@@ -119,9 +121,10 @@ exec --no-startup-id terminator -T handy_term
 exec --no-startup-id terminator -T handy_term2
 exec --no-startup-id thunderbird
 exec --no-startup-id dropboxd
+exec --no-startup-id nm-applet
 exec pidgin
 exec skype
-exec hipchat
+exec --no-startup-id hipchat
 exec hexchat
 
 # Window specific configs
@@ -133,7 +136,7 @@ bindsym $mod+q [class="^Pidgin$" window_role="^conversation$"] scratchpad show
 for_window [class="^Terminator$" title="^handy_term$"] floating enable
 for_window [class="^Terminator$" title="^handy_term$"] move scratchpad
 bindsym $mod+F1 [class="^Terminator$" title="^handy_term$"] scratchpad show
-bindym $mod+Shift+F1 exec --no-startup-is terminator -T handy_term
+bindsym $mod+Shift+F1 exec --no-startup-id terminator -T handy_term
 
 for_window [class="^Terminator$" title="^handy_term2$"] floating enable
 for_window [class="^Terminator$" title="^handy_term2$"] move scratchpad

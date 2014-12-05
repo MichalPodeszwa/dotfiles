@@ -3,13 +3,12 @@
   switch_to_tab_10 = <Primary>0
   new_tab = <Primary>t
   next_tab = <Primary>Tab
-  switch_to_tab_5 = <Primary>5
   new_window = <Primary>n
   prev_tab = <Primary><Shift>Tab
   switch_to_tab_6 = <Primary>6
   switch_to_tab_7 = <Primary>7
   switch_to_tab_4 = <Primary>4
-  close_term = <Primary>w
+  switch_to_tab_5 = <Primary>5
   switch_to_tab_2 = <Primary>2
   switch_to_tab_3 = <Primary>3
   switch_to_tab_1 = <Primary>1
@@ -19,8 +18,11 @@
 [profiles]
   [[default]]
     background_image = None
+    background_darkness = 0.78
+    background_type = transparent
     scroll_on_output = False
     show_titlebar = False
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]
