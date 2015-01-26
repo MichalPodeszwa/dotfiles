@@ -1,4 +1,13 @@
 {
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2",
+		"ssl-linux"
+	],
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -6,7 +15,9 @@
 		"CSV",
 		"GitGutter",
 		"HTMLBeautify",
+		"Jinja2",
 		"Origami",
+		"Package Control",
 		"Project Manager",
 		"Sublimerge Pro",
 		"Theme - Nexus",

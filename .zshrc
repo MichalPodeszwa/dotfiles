@@ -120,3 +120,7 @@ fi
 
 export LANG="pl_PL.UTF-8"
 export LC_all="pl_PL.UTF-8"
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Programming
+source /bin/virtualenvwrapper.sh
