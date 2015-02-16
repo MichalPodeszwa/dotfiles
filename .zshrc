@@ -1,96 +1,50 @@
-#history
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt hist_expire_dups_first
 setopt inc_append_history
 setopt share_history
 
-#load plugins
-source ~/.zsh/plugins.zsh
+source ~/.zsh/antigen.zsh
+ADOTDIR=$HOME/.zsh
 
-# https://github.com/robbyrussell/oh-my-zsh/issues/1433
-# works on ubuntu:
+antigen use oh-my-zsh
+antigen bundles <<EOB
+    git-prompt
+    git
+    pip
+    command-not-found
+    extract
+    archlinux
+    sudo
+    systemd
+    virtualenv
+    gitignore
+    vagrant
+    zsh-users/zsh-syntax-highlighting
+    zsh-users/zsh-completions src
+    zsh-users/zsh-history-substring-search
+EOB
 
-if grep -q "Arch Linux" /etc/issue
-then
-    bindkey "^[[A" history-search-backward
-    bindkey "^[[B" history-search-forward
-else
-    bindkey "$terminfo[kcuu1]" history-search-backward
-    bindkey "$terminfo[kcud1]" history-search-forward
-fi
+antigen apply
 
-#misc
+zstyle ":completion:*:commands" rehash 1
+
 unsetopt beep
 setopt print_exit_value
 setopt no_hup
 
-#keybindings
-bindkey -e
-bindkey "^[OH" beginning-of-line
-bindkey "^[OF" end-of-line
-bindkey "\e[3~" delete-char
-
-#completion
-autoload -U compinit
-compinit
-setopt completealiases
-setopt nocasematch
-zstyle ':completion:*' menu select
-zstyle ':completion:*:functions:' ignored-patterns '_*'
-zstyle ':completion:*' squeeze-slashes true
-zstyle ":completion:*:commands" rehash 1
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
-# git prompt
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git*' formats "[%b]"
-precmd() {vcs_info}
-
-# better path
-function collapse_pwd {
-    echo $(pwd | sed -e "s,^$HOME,~,")
-}
-
 #prompt
 autoload -U colors && colors
 setopt prompt_subst
-PROMPT='%{$fg[blue]%}%n@%m:%{$fg[green]%}${PWD/#$HOME/~}
-%{$fg[blue]%}╰─${vcs_info_msg_0_}%{$reset_color%} %#> '
+PROMPT='%{$fg[blue]%}$(virtualenv_prompt_info)%n@%m:%{$fg[green]%}${PWD/#$HOME/~}
+%{$fg[blue]%}╰─$(git_prompt_info)%{$reset_color%} %#> '
+RPROMPT=''
 
-# gitignore
-function gi() {
-    curl -L -s https://www.gitignore.io/api/$*
-}
-
-# extract
-ext () {
-    if [ -f $1 ]; then
-        case $1 in
-            *.tar.bz2) tar -jxvf $1 ;;
-            *.tar.gz) tar -zxvf $1 ;;
-            *.bz2) bzip2 -d $1 ;;
-            *.gz) gunzip -d $1 ;;
-            *.tar) tar -xvf $1 ;;
-            *.tgz) tar -zxvf $1 ;;
-            *.tbz2) tar -xvzf $1 ;;
-            *.zip) unzip $1 ;;
-            *.Z) uncompress $1 ;;
-            *.7z) 7z x $1 ;;
-            *.rar) unrar x $1 ;;
-            *.xz) xz -d $1 ;;
-            *) echo "'$1' Error." ;;
-        esac
-    else
-        echo "'$1' is not valid!"
-    fi
-}
-compdef '_files -g "*.{tar.bz2,tar.gz,bz2,gz,tar,tgz,tbz2,zip,Z,7z,rar,xz}"' ext
 
 
 #aliases
+alias ext='extract'
 alias ls='ls -Flh --color=auto'
 alias ll='ls -Flah --color=auto'
 subldiff() {
@@ -113,14 +67,11 @@ alias vp="vagrant provision"
 export BROWSER="firefox"
 export EDITOR="nano"
 
-# enable keychain
+export LANG="pl_PL.UTF-8"
+export LC_all="pl_PL.UTF-8"
+
+
+# enable keychain. ALWAYS LAST
 if (( $+commands[keychain] )) ; then
     eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 fi
-
-export LANG="pl_PL.UTF-8"
-export LC_all="pl_PL.UTF-8"
-# Virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Programming
-source /bin/virtualenvwrapper.sh
