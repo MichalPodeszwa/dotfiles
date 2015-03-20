@@ -19,6 +19,7 @@ antigen bundles <<EOB
     sudo
     systemd
     virtualenv
+    virtualenvwrapper
     gitignore
     vagrant
     zsh-users/zsh-syntax-highlighting
@@ -29,7 +30,6 @@ EOB
 antigen apply
 
 zstyle ":completion:*:commands" rehash 1
-
 unsetopt beep
 setopt print_exit_value
 setopt no_hup
@@ -37,7 +37,7 @@ setopt no_hup
 #prompt
 autoload -U colors && colors
 setopt prompt_subst
-PROMPT='%{$fg[blue]%}$(virtualenv_prompt_info)%n@%m:%{$fg[green]%}${PWD/#$HOME/~}
+PROMPT='%{$fg[yellow]%}$(virtualenv_prompt_info)%{$fg[blue]%}%n@%m:%{$fg[green]%}${PWD/#$HOME/~}
 %{$fg[blue]%}╰─$(git_prompt_info)%{$reset_color%} %#> '
 RPROMPT=''
 
