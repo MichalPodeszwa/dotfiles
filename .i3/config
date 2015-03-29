@@ -160,3 +160,6 @@ for_window [class="^HipChat$"] move scratchpad
 for_window [class="^HipChat$"] scratchpad show
 bindsym $mod+z [class="^HipChat$"] scratchpad show
 
+# Touchpad toggle
+
+bindsym $mod+F12 exec --no-startup-id synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
