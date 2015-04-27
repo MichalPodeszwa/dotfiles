@@ -24,7 +24,7 @@ antigen bundles <<EOB
     vagrant
     zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-completions src
-    zsh-users/zsh-history-substring-search
+    history-substring-search
 EOB
 
 antigen apply
