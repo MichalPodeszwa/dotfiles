@@ -1,4 +1,5 @@
 *zsh-cache
+.zsh/revert-info
 Projects/
 pip.log
 *ca-bundle*

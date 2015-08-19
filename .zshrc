@@ -27,6 +27,8 @@ antigen bundles <<EOB
     history-substring-search
 EOB
 
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+
 antigen apply
 
 zstyle ":completion:*:commands" rehash 1

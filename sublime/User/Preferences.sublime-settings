@@ -1,8 +1,27 @@
 {
 	"bold_folder_labels": true,
+	"close_windows_when_empty": false,
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"detect_indentation": true,
-	"ensure_newline_at_eof_on_save": false,
+	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"vagrant",
+		"bower_components",
+		"node_modules",
+		"*.egg-info",
+		".idea",
+		"venv",
+		"htmlcov",
+		".sass-cache",
+		"__pycache__",
+		".eggs",
+		".vagrant"
+	],
 	"font_size": 9,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
@@ -10,6 +29,7 @@
 	[
 		"Vintage"
 	],
+	"reveal-on-activate": false,
 	"rulers":
 	[
 		80
