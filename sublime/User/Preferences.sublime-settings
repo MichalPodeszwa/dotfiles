@@ -4,13 +4,37 @@
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"detect_indentation": true,
 	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.php~",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace",
+		".coverage"
+	],
 	"folder_exclude_patterns":
 	[
 		".svn",
 		".git",
 		".hg",
 		"CVS",
-		"vagrant",
 		"bower_components",
 		"node_modules",
 		"*.egg-info",
@@ -20,7 +44,8 @@
 		".sass-cache",
 		"__pycache__",
 		".eggs",
-		".vagrant"
+		".vagrant",
+		"build"
 	],
 	"font_size": 9,
 	"highlight_line": true,

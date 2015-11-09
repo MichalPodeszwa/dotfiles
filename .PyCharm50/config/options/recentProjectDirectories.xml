@@ -1,0 +1,42 @@
+<application>
+  <component name="RecentDirectoryProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/Programming/bayer-vipla" />
+        <option value="$USER_HOME$/Programming/trubrain-django" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/Programming/bayer-vipla" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/Programming/bayer-vipla" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/Programming/bayer-vipla">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-143.589" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1447051040459" />
+              <option name="buildTimestamp" value="1446159600000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Programming/trubrain-django">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="PY-143.589" />
+              <option name="productionCode" value="PY" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1446533734542" />
+              <option name="buildTimestamp" value="1446159600000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</application>

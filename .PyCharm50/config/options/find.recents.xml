@@ -1,0 +1,32 @@
+<application>
+  <component name="FindRecents">
+    <findStrings>
+      <find>AppUser</find>
+      <find>pycharm</find>
+      <find>re</find>
+      <find>g</find>
+      <find>HTMLE</find>
+      <find>saveAs</find>
+      <find>Blob</find>
+      <find>undefined</find>
+      <find>console.</find>
+      <find>drag</find>
+      <find>bind</find>
+      <find>debugger</find>
+      <find>Eve</find>
+      <find>svg</find>
+      <find>router</find>
+      <find>this.select</find>
+      <find>paper</find>
+      <find>update:</find>
+      <find>findRoute</find>
+      <find>deb</find>
+      <find>render:</find>
+      <find>sourcePoint</find>
+      <find>_findConnection</find>
+      <find>this.sourcePoint</find>
+      <find>_findConnectionPoints</find>
+      <find>findroute</find>
+    </findStrings>
+  </component>
+</application>

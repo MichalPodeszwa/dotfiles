@@ -1,0 +1,17 @@
+<application>
+  <component name="PySdkService">
+    <option name="REMOVED_SDKS">
+      <set>
+        <option value="$USER_HOME$/.virtualenvs/bayer/bin/python" />
+        <option value="$USER_HOME$/.virtualenvs/edrna/bin/python" />
+        <option value="$USER_HOME$/.virtualenvs/genetics/bin/python" />
+        <option value="$USER_HOME$/.virtualenvs/hellosailor/bin/python" />
+        <option value="$USER_HOME$/.virtualenvs/trubrain/bin/python" />
+        <option value="$USER_HOME$/Programming/bayer-vipla/venv/bin/python" />
+        <option value="/usr/bin/python2.7" />
+        <option value="/usr/bin/python3.4" />
+        <option value="/usr/bin/python3.5" />
+      </set>
+    </option>
+  </component>
+</application>

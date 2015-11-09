@@ -1,0 +1,74 @@
+<application>
+  <component name="ProjectJdkTable">
+    <jdk version="2">
+      <name value="Remote Python 2.7.6 Vagrant VM at ~/Programming/trubrain-django (/vagrant/venv/bin/python)" />
+      <type value="Python SDK" />
+      <version value="Python 2.7.6" />
+      <homePath value="vagrant:///home/vessel/Programming/trubrain-django/vagrant/venv/bin/python" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-2071719510" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/201544331" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/724150857" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-154863933" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-750476118" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/1245039442" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/1696275726" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/169518958" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/1546637350" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-1729726582" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/python_stubs/-1565409069" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional VAGRANT_FOLDER="$USER_HOME$/Programming/trubrain-django" INTERPRETER_PATH="/vagrant/venv/bin/python" HELPERS_PATH="/home/vagrant/.pycharm_helpers" INITIALIZED="false" VALID="true" SKELETONS_PATH="" VERSION="Python 2.7.6">
+        <PathMappingSettings>
+          <option name="pathMappings">
+            <list>
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-2071719510" remote-root="/vagrant/venv/lib/python2.7" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/201544331" remote-root="/usr/lib/python2.7" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/724150857" remote-root="/usr/lib/python2.7/plat-x86_64-linux-gnu" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-154863933" remote-root="/usr/lib/python2.7/lib-tk" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-750476118" remote-root="/vagrant/venv/local/lib/python2.7/site-packages" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/1245039442" remote-root="/vagrant/venv/local/lib/python2.7/site-packages/newrelic-2.8.0.7" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/1696275726" remote-root="/vagrant/venv/lib/python2.7/site-packages" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/169518958" remote-root="/vagrant/venv/lib/python2.7/site-packages/newrelic-2.8.0.7" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/1546637350" remote-root="/vagrant/venv/local/lib/python2.7/site-packages/pycharm-debug.egg" />
+              <mapping local-root="$USER_HOME$/.PyCharm50/system/remote_sources/-1565409069/-1729726582" remote-root="/vagrant/venv/lib/python2.7/site-packages/pycharm-debug.egg" />
+            </list>
+          </option>
+        </PathMappingSettings>
+      </additional>
+    </jdk>
+    <jdk version="2">
+      <name value="Python 2.7.6 virtualenv at ~/Programming/trubrain-django/venv" />
+      <type value="Python SDK" />
+      <version value="Python 2.7.6" />
+      <homePath value="$USER_HOME$/Programming/trubrain-django/venv/bin/python" />
+      <roots>
+        <classPath>
+          <root type="composite">
+            <root type="simple" url="file://$USER_HOME$/Programming/trubrain-django/venv/lib/python2.7" />
+            <root type="simple" url="file://$USER_HOME$/Programming/trubrain-django/venv/lib/python2.7/lib-dynload" />
+            <root type="simple" url="file:///usr/lib/python2.7" />
+            <root type="simple" url="file:///usr/lib/python2.7/plat-x86_64-linux-gnu" />
+            <root type="simple" url="file:///usr/lib/python2.7/lib-tk" />
+            <root type="simple" url="file://$USER_HOME$/Programming/trubrain-django/venv/lib/python2.7/site-packages" />
+            <root type="simple" url="file://$USER_HOME$/Programming/trubrain-django/venv/lib/python2.7/site-packages/newrelic-2.8.0.7" />
+            <root type="simple" url="file://$APPLICATION_HOME_DIR$/helpers/python-skeletons" />
+            <root type="simple" url="file://$USER_HOME$/.PyCharm50/system/python_stubs/-1190565656" />
+          </root>
+        </classPath>
+        <sourcePath>
+          <root type="composite" />
+        </sourcePath>
+      </roots>
+      <additional ASSOCIATED_PROJECT_PATH="$USER_HOME$/Programming/trubrain-django" />
+    </jdk>
+  </component>
+</application>

@@ -1,0 +1,80 @@
+<application>
+  <component name="StatisticsApplicationUsages">
+    <group name="jdbc-datasource">
+      <project id="trubrain-django" values="SQLite/3.8.9" collectionTime="1446540433623" />
+    </group>
+    <group name="JavaScript versions">
+      <project id="trubrain-django" values="ECMAScript 5.1" collectionTime="1446540433623" />
+      <project id="bayer-vipla" values="ECMAScript 6" collectionTime="1447051030345" />
+    </group>
+    <group name="vcs">
+      <project id="trubrain-django" values="Git" collectionTime="1446540433397" />
+      <project id="bayer-vipla" values="Git" collectionTime="1447051030303" />
+    </group>
+    <group name="frameworks">
+      <project id="trubrain-django" values="django" collectionTime="1446540433397" />
+    </group>
+    <group name="JSDebugConfig">
+      <project id="bayer-vipla" values="browser-default.preferredBrowser-null.with_mappings" collectionTime="1447051030361" />
+    </group>
+    <group name="run-configuration-type">
+      <project id="trubrain-django" values="PyRemoteDebugConfigurationType" collectionTime="1446540433398" />
+      <project id="bayer-vipla" values="JavascriptDebugType" collectionTime="1447051030304" />
+    </group>
+    <group name="jdbc-driver">
+      <project id="trubrain-django" values="org.sqlite.JDBC" collectionTime="1446540433623" />
+    </group>
+    <group name="py-interpreter">
+      <project id="trubrain-django" values="Python 2.7.6" collectionTime="1446540433446" />
+      <project id="bayer-vipla" values="Python 2.7.6" collectionTime="1447051030339" />
+    </group>
+    <group name="file-type">
+      <project id="trubrain-django" values="Jinja2,HTML,UNKNOWN,SQL,CSS,SourceMap,PLAIN_TEXT,DATASOURCE_STORAGE,SQLite Database,SCSS,JavaScript,Images,XML,TypeScript,YAML,JSHint,Python,Less,JSCS,Ini,JSON" collectionTime="1446540433446" />
+      <project id="bayer-vipla" values="ESLint,PATCH,JavaScript,CSS,JSHint,ARCHIVE,HTML,YAML,TypeScript,JSON,SourceMap,C++,Python,PLAIN_TEXT,SCSS,XML,UNKNOWN,CoffeeScript,Images,JSCS,ReST" collectionTime="1447051030330" />
+    </group>
+    <group name="module type">
+      <project id="trubrain-django" values="PYTHON_MODULE" collectionTime="1446540433397" />
+      <project id="bayer-vipla" values="PYTHON_MODULE" collectionTime="1447051030303" />
+    </group>
+    <group name="py-packages">
+      <project id="trubrain-django" values="Collectfast,html5lib,coverage,selenium,django-hijack,pytest-watch,psycopg2,fake-factory,facebook-sdk,South,six,django-storages,enum34,celery,boto,static,httmock,stripe,django-sekizai,django-coverage,requests,django-adminplus,django-heroku-memcacheify,gunicorn,python-memcached,redis,sendgrid,django-filter,django-quicky,python-dateutil,django-toolbelt,newrelic,django-pylibmc,django-countries,dj-static,wsgiref,dj-database-url,pytest-cov,django-angular,Pillow,pylibmc,analytics-python,djangorestframework,Django,django-mptt,pytest-django" collectionTime="1446540433623" />
+    </group>
+    <group name="javaScript Scope Usages">
+      <project id="trubrain-django" values="Project,Project" collectionTime="1446540433623" />
+      <project id="bayer-vipla" values="Project,Project,Project" collectionTime="1447051030345" />
+    </group>
+  </component>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="CreateFile.CreateFileAction" count="12" />
+      <entry feature="JSDebugConfig.Debug.browser-default.preferredBrowser-null.with_mappings" count="13" />
+      <entry feature="JSDebugConfig.Run.browser-default.preferredBrowser-null.with_mappings" count="1" />
+      <entry feature="execute.JavascriptDebugType.Debug" count="13" />
+      <entry feature="execute.JavascriptDebugType.Run" count="1" />
+      <entry feature="execute.PyRemoteDebugConfigurationType.Debug" count="5" />
+      <entry feature="execute.Python.DjangoServer.Run" count="7" />
+      <entry feature="execute.PythonConfigurationType.Run" count="2" />
+      <entry feature="ide.help.ideaInterface.editor" count="4" />
+      <entry feature="ide.settings.Code_Completion" count="1" />
+      <entry feature="ide.settings.Django" count="1" />
+      <entry feature="ide.settings.General" count="1" />
+      <entry feature="ide.settings.Gherkin" count="1" />
+      <entry feature="ide.settings.JavaScript" count="1" />
+      <entry feature="ide.settings.Keymap" count="9" />
+      <entry feature="ide.settings.Less" count="1" />
+      <entry feature="ide.settings.Project_Interpreter" count="1" />
+      <entry feature="ide.settings.Project_Structure" count="1" />
+      <entry feature="ide.settings.SCSS" count="1" />
+      <entry feature="ide.settings.Sass" count="1" />
+      <entry feature="ide.settings.Smart_Keys" count="1" />
+      <entry feature="ide.settings.Yaml" count="1" />
+      <entry feature="ideaapp.started" count="7" />
+      <entry feature="tips.of.the.day.next" count="1" />
+      <entry feature="uml.ShowDiagram.DIFF.popup" count="3" />
+      <entry feature="uml.ShowDiagram.DjangoModelDependency" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.Settings" count="1" />
+      <entry feature="welcome.screen.null" count="2" />
+    </counts>
+  </component>
+</application>

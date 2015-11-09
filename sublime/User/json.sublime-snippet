@@ -1,6 +1,6 @@
 <snippet>
     <content><![CDATA[
-import pprint; pprint.pprint(${1:json}, width=1)
+import pprint; pprint.pprint(${1:json})
 ]]></content>
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>json</tabTrigger>

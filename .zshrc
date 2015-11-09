@@ -68,7 +68,7 @@ alias vp="vagrant provision"
 #vars
 export BROWSER="firefox"
 export EDITOR="nano"
-
+export VAGRANT_DEFAULT_PROVIDER="lxc"
 export LANG="pl_PL.UTF-8"
 export LC_all="pl_PL.UTF-8"
 
@@ -77,3 +77,6 @@ export LC_all="pl_PL.UTF-8"
 if (( $+commands[keychain] )) ; then
     eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 fi
+
+export NVM_DIR="/home/vessel/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
