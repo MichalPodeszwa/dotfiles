@@ -2,24 +2,19 @@
 set $mod Mod4
 floating_modifier $mod
 
-font pango:DejaVu Sans Mono 8
+focus_follows_mouse no
+
+font pango:DefaVu Sans Mono 8
 
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
-bindsym $mod+l exec slimlock
-
-bindsym $mod+d exec LANG=pl_PL.UTF-8 dmenu_run
+bindsym $mod+l exec dm-tool lock
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-
-
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
 
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -31,61 +26,38 @@ bindsym $mod+Shift+Tab workspace prev_on_output
 
 bindsym $mod+h split h
 bindsym $mod+v split v
-bindsym $mod+f fullscreen
+bindsym $mod+f fullscreen toggle
 
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+space floating toggle
 
+# switch to workspace
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+bindsym $mod+0 workspace 10
 
-# Named workspaces
-set $IMs 1
-set $IMs_name IMs
-bindsym $mod+$IMs workspace $IMs:$IMs_name
-bindsym $mod+Shift+$IMs move container to workspace $IMs:$IMs_name
-
-set $Web 2
-set $Web_name Web
-bindsym $mod+$Web workspace $Web:$Web_name
-bindsym $mod+Shift+$Web move container to workspace $Web:$Web_name
-
-set $Code 3
-set $Code_name Code
-bindsym $mod+$Code workspace $Code:$Code_name
-bindsym $mod+Shift+$Code move container to workspace $Code:$Code_name
-
-set $Terminals 4
-set $Terminals_name Terminals
-bindsym $mod+$Terminals workspace $Terminals:$Terminals_name
-bindsym $mod+Shift+$Terminals move container to workspace $Terminals:$Terminals_name
-
-set $Media 5
-set $Media_name Media
-bindsym $mod+$Media workspace $Media:$Media_name
-bindsym $mod+Shift+$Media move container to workspace $Media:$Media_name
-
-set $Firebug 6
-set $Firebug_name Firebug
-bindsym $mod+$Firebug workspace $Firebug:$Firebug_name
-bindsym $mod+Shift+$Firebug move container to workspace $Firebug:$Firebug_name
-
-# Unnamed workspaces
-bindsym $mod+7 workspace number 7
-bindsym $mod+8 workspace number 8
-bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
-bindsym $mod+Shift+7 move container to workspace number 7
-bindsym $mod+Shift+8 move container to workspace number 8
-bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
-
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 10
 
 #Move workspaces between outputs
 bindsym $mod+Shift+Ctrl+Left move workspace to output left
@@ -93,47 +65,40 @@ bindsym $mod+Shift+Ctrl+Right move workspace to output right
 bindsym $mod+Shift+Ctrl+Up move workspace to output up
 bindsym $mod+Shift+Ctrl+Down move workspace to output down
 
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
 mode "resize" {
+    bindsym j resize shrink width 2 px or 2 ppt
+    bindsym k resize grow height 2 px or 2 ppt
+    bindsym l resize shrink height 2 px or 2 ppt
+    bindsym semicolon resize grow width 2 px or 2 ppt
 
-        bindsym j resize shrink width 2 px or 2 ppt
-        bindsym k resize grow height 2 px or 2 ppt
-        bindsym l resize shrink height 2 px or 2 ppt
-        bindsym semicolon resize grow width 2 px or 2 ppt
+    bindsym Left resize shrink width 2 px or 2 ppt
+    bindsym Down resize grow height 2 px or 2 ppt
+    bindsym Up resize shrink height 2 px or 2 ppt
+    bindsym Right resize grow width 2 px or 2 ppt
 
-        bindsym Left resize shrink width 2 px or 2 ppt
-        bindsym Down resize grow height 2 px or 2 ppt
-        bindsym Up resize shrink height 2 px or 2 ppt
-        bindsym Right resize grow width 2 px or 2 ppt
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
-bindsym $mod+p exec autorandr --change
-
+# Start i3bar to display a workspace bar (plus the system information i3status finds out, if
+# available)
 bar {
         status_command i3status
 }
 
-focus_follows_mouse off
+bindsym $mod+F12 exec --no-startup-id synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0') && notify-send 'Touchpad toggled'
 
-# Autostart
-exec --no-startup-id terminator -T handy_term
-exec --no-startup-id terminator -T handy_term2
-exec --no-startup-id thunderbird
-exec --no-startup-id dropboxd
-exec --no-startup-id nm-applet
-exec pidgin
-exec skype
-exec --no-startup-id hipchat
-exec hexchat
-
-# Window specific configs
-for_window [class="^Pidgin$" window_role="^conversation$"] floating enable
-for_window [class="^Pidgin$" window_role="^conversation$"] move scratchpad
-for_window [class="^Pidgin$" window_role="^conversation$"] scratchpad show
-bindsym $mod+q [class="^Pidgin$" window_role="^conversation$"] scratchpad show
 
 for_window [class="^Terminator$" title="^handy_term$"] floating enable
 for_window [class="^Terminator$" title="^handy_term$"] move scratchpad
@@ -145,21 +110,52 @@ for_window [class="^Terminator$" title="^handy_term2$"] move scratchpad
 bindsym $mod+F2 [class="^Terminator$" title="^handy_term2$"] scratchpad show
 bindsym $mod+Shift+F2 exec --no-startup-id terminator -T handy_term2
 
+
+# Messenger (Chrome, I hate you)
+for_window [instance="crx_mfenjmgcgpcmdflhojbbcjmdniglklcm"] floating enable
+for_window [instance="crx_mfenjmgcgpcmdflhojbbcjmdniglklcm"] move scratchpad
+for_window [instance="crx_mfenjmgcgpcmdflhojbbcjmdniglklcm"] scratchpad show
+bindsym $mod+q [instance="crx_mfenjmgcgpcmdflhojbbcjmdniglklcm"] scratchpad show
+
+# HipChat (Chrome, I hate you)
+for_window [instance="crx_hkpceiegfebnncjnabomldmjemakhlbm"] floating enable
+for_window [instance="crx_hkpceiegfebnncjnabomldmjemakhlbm"] move scratchpad
+for_window [instance="crx_hkpceiegfebnncjnabomldmjemakhlbm"] scratchpad show
+bindsym $mod+z [instance="crx_hkpceiegfebnncjnabomldmjemakhlbm"] scratchpad show
+
+# Skype (Chrome, I hate you)
+for_window [instance="crx_acmhlhmafhmddiencgbjhfdohegkpglb"] floating enable
+for_window [instance="crx_acmhlhmafhmddiencgbjhfdohegkpglb"] move scratchpad
+for_window [instance="crx_acmhlhmafhmddiencgbjhfdohegkpglb"] scratchpad show
+bindsym $mod+a [instance="crx_acmhlhmafhmddiencgbjhfdohegkpglb"] scratchpad show
+
+
 for_window [class="^Thunderbird$"] floating enable
 for_window [class="^Thunderbird$"] move scratchpad
-bindsym $mod+m [class="^Thunderbird$"] scratchpad show
-bindsym $mod+Shift+m exec --no-startup-id thunderbird
+for_window [class="^Thunderbird$" instance="^((?!Mail).)*$"] scratchpad show
+bindsym $mod+grave [class="^Thunderbird$"] scratchpad show
+bindsym $mod+Shift+grave exec --no-startup-id thunderbird
 
-for_window [class="^Skype$" window_role="^ConversationsWindow$"] floating enable
-for_window [class="^Skype$" window_role="^ConversationsWindow$"] move scratchpad
-for_window [class="^Skype$" window_role="^ConversationsWindow$"] scratchpad show
-bindsym $mod+a [class="^Skype$" window_role="^ConversationsWindow$"] scratchpad show
 
-for_window [class="^HipChat$"] floating enable
-for_window [class="^HipChat$"] move scratchpad
-for_window [class="^HipChat$"] scratchpad show
-bindsym $mod+z [class="^HipChat$"] scratchpad show
+#Media keys
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86MonBrightnessUp exec xbacklight +5
+bindsym XF86MonBrightnessDown exec xbacklight -5
 
-# Touchpad toggle
-
-bindsym $mod+F12 exec --no-startup-id synclient TouchpadOff=$(synclient -l | grep -c 'TouchpadOff.*=.*0')
+# Autostarts
+## terminals
+exec --no-startup-id terminator -T handy_term
+exec --no-startup-id terminator -T handy_term2
+## auto lockscreen
+exec --no-startup-id /usr/bin/xss-lock -- dm-tool switch-to-greeter
+exec --no-startup-id /usr/bin/thunderbird
+exec --no-startup-id dropbox
+exec --no-startup-id nm-applet
+## volume applet
+exec --no-startup-id volumeicon
+## desktop background
+exec --no-startup-id feh --bg-fill ~/butterfly-wallpaper.jpeg
+## screenshots
+exec --no-startup-id lightscreen --nogui
