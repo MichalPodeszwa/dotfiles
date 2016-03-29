@@ -70,8 +70,7 @@ alias vp="vagrant provision"
 export BROWSER="firefox"
 export EDITOR="nano"
 export VAGRANT_DEFAULT_PROVIDER="lxc"
-export LANG="pl_PL.UTF-8"
-export LC_all="pl_PL.UTF-8"
+
 
 export NVM_DIR="/home/vessel/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
