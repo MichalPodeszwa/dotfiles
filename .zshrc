@@ -21,7 +21,6 @@ antigen bundles <<EOB
     virtualenv
     virtualenvwrapper
     gitignore
-    ssh-agent
     vagrant
     zsh-users/zsh-syntax-highlighting
     zsh-users/zsh-completions src
@@ -42,7 +41,7 @@ autoload -U colors && colors
 setopt prompt_subst
 PROMPT='%{$fg[yellow]%}$(virtualenv_prompt_info)%{$fg[blue]%}%n@%m:%{$fg[green]%}${PWD/#$HOME/~}
 %{$fg[blue]%}╰─$(git_prompt_info)%{$reset_color%} %#> '
-RPROMPT=''
+RPROMPT='%{$fg[blue]%}[%D{%k:%M:%S}]%{$reset_color%}'
 
 
 
@@ -70,7 +69,13 @@ alias vp="vagrant provision"
 export BROWSER="firefox"
 export EDITOR="nano"
 export VAGRANT_DEFAULT_PROVIDER="lxc"
-
+export TERM="xterm-256color"
 
 export NVM_DIR="/home/vessel/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Refresh prompt every second
+TMOUT=1
+TRAPALRM() {
+    zle reset-prompt
+}
