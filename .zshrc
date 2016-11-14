@@ -77,5 +77,10 @@ export NVM_DIR="/home/vessel/.nvm"
 # Refresh prompt every second
 TMOUT=1
 TRAPALRM() {
-    zle reset-prompt
+    if [ "$WIDGET" != "expand-or-complete" ]; then
+        zle reset-prompt
+    fi;
 }
+
+export ANDROID_HOME=~/Android/Sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
