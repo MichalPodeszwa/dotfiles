@@ -41,14 +41,14 @@ autoload -U colors && colors
 setopt prompt_subst
 PROMPT='%{$fg[yellow]%}$(virtualenv_prompt_info)%{$fg[blue]%}%n@%m:%{$fg[green]%}${PWD/#$HOME/~}
 %{$fg[blue]%}╰─$(git_prompt_info)%{$reset_color%} %#> '
-RPROMPT='%{$fg[blue]%}[%D{%k:%M:%S}]%{$reset_color%}'
+RPROMPT='%{$fg[blue]%}[%D{%k:%M}]%{$reset_color%}'
 
 
 
 #aliases
 alias ext='extract'
-alias ls='ls -Flh --color=auto'
-alias ll='ls -Flah --color=auto'
+alias ls='ls -GFlh'
+alias ll='ls -GFlah'
 subldiff() {
     git diff $* > /tmp/vardiff.diff && subl /tmp/vardiff.diff
 }
@@ -74,8 +74,8 @@ export TERM="xterm-256color"
 export NVM_DIR="/home/vessel/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-# Refresh prompt every second
-TMOUT=1
+# Refresh prompt every minute
+TMOUT=60
 TRAPALRM() {
     if [ "$WIDGET" != "expand-or-complete" ]; then
         zle reset-prompt
