@@ -7,6 +7,7 @@ setopt share_history
 
 source ~/.zsh/antigen.zsh
 ADOTDIR=$HOME/.zsh
+export NVM_AUTO_USE=true
 
 antigen use oh-my-zsh
 antigen bundles <<EOB
@@ -28,6 +29,7 @@ antigen bundles <<EOB
 EOB
 
 antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle lukechilds/zsh-nvm
 
 antigen apply
 
@@ -66,21 +68,15 @@ alias vp="vagrant provision"
 
 
 #vars
-export BROWSER="firefox"
+export BROWSER="google-chrome-stable"
 export EDITOR="nano"
 export VAGRANT_DEFAULT_PROVIDER="lxc"
 export TERM="xterm-256color"
 
-export NVM_DIR="/home/vessel/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# Refresh prompt every minute
-TMOUT=60
+# Refresh prompt every 30 seconds
+TMOUT=30
 TRAPALRM() {
     if [ "$WIDGET" != "expand-or-complete" ]; then
         zle reset-prompt
     fi;
 }
-
-export ANDROID_HOME=~/Android/Sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
