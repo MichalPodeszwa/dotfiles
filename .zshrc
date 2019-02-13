@@ -72,6 +72,7 @@ export BROWSER="google-chrome-stable"
 export EDITOR="nano"
 export VAGRANT_DEFAULT_PROVIDER="lxc"
 export TERM="xterm-256color"
+export PATH="$PATH:/usr/local/go/bin"
 
 # Refresh prompt every 30 seconds
 TMOUT=30

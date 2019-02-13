@@ -1,5 +1,7 @@
 *zsh-cache
 .zsh/revert-info
+.zsh/.zcompdump*
+.zsh/debug.log
 Projects/
 pip.log
 *ca-bundle*
