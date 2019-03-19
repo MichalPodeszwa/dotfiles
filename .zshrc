@@ -81,3 +81,7 @@ TRAPALRM() {
         zle reset-prompt
     fi;
 }
+
+if [[ -f ~/.zshrc.local && -r ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
