@@ -8,6 +8,7 @@ setopt share_history
 source ~/.zsh/antigen.zsh
 ADOTDIR=$HOME/.zsh
 export NVM_AUTO_USE=true
+export HOST=$HOST
 
 antigen use oh-my-zsh
 antigen bundles <<EOB
@@ -20,7 +21,7 @@ antigen bundles <<EOB
     sudo
     systemd
     virtualenv
-    virtualenvwrapper
+#    virtualenvwrapper
     gitignore
     vagrant
     zsh-users/zsh-syntax-highlighting
@@ -30,6 +31,9 @@ EOB
 
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 antigen bundle lukechilds/zsh-nvm
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle MichaelAquilina/zsh-autoswitch-virtualenv
 
 antigen apply
 
@@ -37,6 +41,9 @@ zstyle ":completion:*:commands" rehash 1
 unsetopt beep
 setopt print_exit_value
 setopt no_hup
+
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
 
 #prompt
 autoload -U colors && colors
@@ -85,3 +92,5 @@ TRAPALRM() {
 if [[ -f ~/.zshrc.local && -r ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi
+
+eval "$(direnv hook zsh)"
